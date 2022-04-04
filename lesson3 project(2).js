@@ -9,6 +9,10 @@ function Cheems(){
         textChange.innerHTML = 'Doge';
 }
 
+function keyboard(){
+        alert('Hello!');
+}
+
 function Doge(){
         var a = document.getElementById('Second');
                 a.style.backgroundColor = 'green';
