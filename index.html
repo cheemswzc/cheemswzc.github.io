@@ -1,276 +1,437 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>Canadian cuisine</title>
-  <style type="text/css">
-.first ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    height: 50px;
-    line-height: 50px;
-}
 
-.first li {
-    float: left;
-    width: 100px;
-    text-align: center;
-}
+	<meta charset="utf-8">
+	<meta name="viewport">
 
-.first li .active {
-    background-color: #00ced1;
-}
+	<title>Ethanol</title>
 
-.first li a {
-    color: white;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-}
+	<style type="text/css">
 
-.img1 {
-    border-radius: 100% 100% / 100% 100%;
-}
+	body{
+			background-color: white;
 
-.first li .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    /*padding: 14px 16px;*/
-    text-decoration: none;
-}
+		    background-position: top left;
+		    background-attachment: scroll;
+        background-size: 100%;
+		}
+    
+    body:not(.custom-background-image):before {
+    	background-color: black;
+	    top: 0;
+	}
 
-.first li a:hover,
-.dropdown:hover .dropbtn {
-    background-color: ;
-}
+	body:not(.custom-background-image):before, 
+	body:not(.custom-background-image):after {
+	    background: inherit;
+	    content: "";
+	    display: block;
+	    height: 120px;
+	    position: fixed;
+	    width: 100%;
+	    z-index: 1;
+	}
 
-.first li.dropdown {
-    display: inline-block;
-}
+	*, *:before, *:after {
+	    box-sizing: inherit;
+	}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    /*background-color: #f9f9f9;*/
-    min-width: 160px;
-    z-index: 1;
-    width: 50px;
-    height: 50px;
-}
+    #marco .input{
+      width: 300px;
+      height: 36px;
+      border: 1px solid #000000;
+      border-right: none;
+      border-radius: 4px;
+    }
+    
+    button{
+      position: relative;
+      right: 2px;
+      width: 50;
+      height: 35px;
+      font-size: 14px;
+      color: white;
+      background:  #000000;
+      border：0；
+      border-radius: 4px;
+      border-top-left-radius: 4px;
+		  border-bottom-left-radius: 4px;
+		  border-top-right-radius: 4px;
+		  border-bottom-right-radius: 4px;
+    }
 
-.dropdown-content a{
-    background-color: #333333b8;
-    /*padding: 10px 10px;*/
-    border: thick double #111111eb;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+    span[data-descr] {
+		  position: relative;
+		  text-decoration: underline;
+		  color: #00F;
+		  cursor: help;
+		  z-index: 0;
+    }
 
-.dropdown-content a:hover {
-    background-color: #333333cf !important;
-}
+		span[data-descr]:hover::after,
+		span[data-descr]:focus::after {
+		  content: attr(data-descr);
+		  position: absolute;
+		  left: 0;
+		  top: 24px;
+		  min-width: 200px;
+		  border: 1px #aaaaaa solid;
+		  border-radius: 10px;
+		  background-color: black;
+		  padding: 12px;
+		  color: whitesmoke;
+		  font-size: 14px;
+		  z-index: 0;
+		}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+		#marco{
+		  bottom: 0;
+		  right: 0;
+		  color: #000000; 
+		  background: transparent; 
+		  border: 2px solid #000000;
+		  border-radius: 6px; 
+		  border: none;
+		  color: white;
+/*		  padding: 16px 32px;*/
+		  text-align: center;
+		  display: inline-block;
+		  font-size: 20px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s; 
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		  text-decoration: none;
+		  text-transform: uppercase;
+		  border-top-left-radius: 26px;
+		  border-bottom-left-radius: 26px;
+		  border-top-right-radius: 26px;
+		  border-bottom-right-radius: 26px;
+		}
 
-td,th {
-    padding: 0;
-}
+		#marco {
+		      background-color: white; 
+		      color: black; 
+		      border: 2px solid #000000;
+		}
 
-td {
-    text-align: center;
-}
+		#marco:hover {
+		      background-color: grey;
+		      color: white;
+		}
 
-table {
-  border-collapse: separate;
-  letter-spacing: nomal;
-  font-family: Comic Sans MS;
-  font-size: .8rem;
-  text-decoration: none;
-}
+	  .A{   
+	    position: fixed;
+      top: 40px;
+      margin: 10px 575px ;
+		  width:50px;
+		  height: 50px; 
+		  display: block;
+      z-index: 2;
+		}
 
-.Second{
-    border: solid;
-    color: whitesmoke;
-}
-
-.Third{
-    color:whitesmoke ; 
-    font-size: 3em; 
+		#B{
+	  border-style: solid;
+	  border-width: 2px;
+	  border-color: grey;
+    color: grey;
     font-family: Comic Sans MS;
-}
+    text-shadow: 1.5px 1.5px 1px #454444;
+    font-size: 31px;
+    text-decoration: none;
+    margin: auto;
+		}
 
-.Fourth{
-    background-color: grey; 
-    background-repeat:repeat; 
-    background-size: 100% 100%;
-    font-family: Comic Sans MS;
-}
+		a:hover, a:active {
+		  color: lightgrey;
+		}
 
-.Five{
-    text-align: left;
-}
+		a.nav:link{
+		  background-color: #f5f5f5;
+		  color: grey;
+		  display: inline;
+		  padding: 10px;
+		  text-align:center;
+		  width: 1200px;
+		  font-family: Comic Sans MS;
+		  font-size: 31px;
+		  text-decoration: none;
+		  margin: auto;
+		}
 
-.Sixth{
-    color:black;
-    text-decoration: none
+		a.nav:hover{
+		  color: #f8f8f8;
+		  background-color:#454444;
+		}
+
+		li.nav{
+		  float: left;
+		  list-style-type: none;
+		}
+
+		ul.nav{
+		  display: center;
+		  margin:auto;
+		  font-family: Comic Sans MS;
+		}
+
+		ul.nav li:first-child a {
+		  border-top-left-radius: 26px;
+		  border-bottom-left-radius: 26px;
+		}
+
+		ul.nav li:last-child a {
+		  border-top-right-radius: 26px;
+		  border-bottom-right-radius: 26px;
+		}
+
+		#cheems{
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  color: #000000; 
+		  background: transparent; 
+		  border: 2px solid #000000;
+		  border-radius: 6px; 
+		  border: none;
+		  color: white;
+		  padding: 16px 32px;
+		  text-align: center;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s; 
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		  text-decoration: none;
+		  text-transform: uppercase;
+		  border-top-left-radius: 26px;
+		  border-bottom-left-radius: 26px;
+		  border-top-right-radius: 26px;
+		  border-bottom-right-radius: 26px;
+		}
+
+		#cheems {
+		      background-color: white; 
+		      color: black; 
+		      border: 2px solid #000000;
+		}
+
+		#cheems:hover {
+		      background-color: grey;
+		      color: white;
+		}
+
+		#menu {
+  position: fixed;
+  left: 5em;
+  top:0;
+  margin-top: 2.5em;
+  z-index: 2;
 }
 
   </style>
+
+	<link rel="stylesheet" type="text/css" href="Alien2.css">
+
 </head>
-<body class="Fourth">
 
-<div class="first">
+<body>
 
-  <ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="Canada cuisine 2.html">Poutine</a></li>
-    <li><a href="Canada cuisine 3.html">Ginger Ale</a></li>
+	<input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
 
-    <li style="float: right;"><a href="#search">Search<img class="img1" src='bing_image_14.jpg'width='17px'height='17px'alt="search"/></a></li>
+	<img id="menu" src="https://ak.picdn.net/shutterstock/videos/28965526/thumb/12.jpg" width="150px" height="80px">
 
-    <li class="dropdown">
+<!-- 	<center>
 
-      <a class="dropbtn">Information▽</a>
-      <div class="dropdown-content">
-        <a href="https://en.wikipedia.org/wiki/Canadian_cuisine">Canada cuisine(wiki)</a>
-        <a href="https://en.wikipedia.org/wiki/Poutine">Poutine(wiki)</a>
-        <a href="https://en.wikipedia.org/wiki/Ginger_ale">Ginger Ale(wiki)</a>
+	<div class="A">
 
-      </div>
-    </li>
-  </ul>
+		<center>
+		
+			<ul class="nav">
+				<center>
+        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindow()" href=""><b>Home</b></a></li>
+        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindoww()" href=""><b>About</b></a></li>
+        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindowww()" href=""><b>News</b></a></li>
+        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindowwww()" href=""><b>Recruit</b></a></li>
+        </center>
+      </ul>
 
-</div>
+    </center>
+
+	</div>
+
+	</center> -->
+
+<br><br><br><br><br><br>
 
 <center>
-    <h1 class="Third">Canadian cuisine</h1>
-  </center>
-<table>
-  <tr>
-    <th><img src="https://fh-sites.imgix.net/sites/3373/2019/10/03163915/canadaday_blog-840x444.jpg?auto=compress%2Cformat&w=700&h=700&fit=max"></th>
-    <td><h3 style="color: black; text-align: left;">
-&ensp;&ensp;&ensp;&ensp;Canadian cuisine consists of the cooking traditions and practices of Canada, and often varies depending on the region of the nation.
 
-<br>
+<h1 class="A" style="color: grey;">Ethanol</h1>
+<h3 style="color: grey;">Ethanol (also called ethyl alcohol, grain alcohol, drinking alcohol, or simply alcohol) is an organic chemical compound. <br>It is a simple alcohol with the chemical formula C2H6O. Its formula can be also written as CH. 3−CH. 2−OH or C.</h1>
 
-&ensp;&ensp;&ensp;&ensp;First Nations and Inuit peoples have practiced their own culinary traditions in what is now Canada since time immemorial. The advent of European explorers and settlers, first on the east coast and then throughout the wider territories of New France, British North America and Canada, saw to the melding of foreign recipes, cooking techniques, and ingredients with indigenous flora and fauna. Modern Canadian cuisine has maintained this dedication to local ingredients and terroir, as exemplified in the naming of specific ingredients based on their locale, such as Digby scallops, Pacific smoked salmon, Alberta-raised beef, Malpeque oysters, Brome Lake duckling, or Winnipeg goldeye. Accordingly, Canadian cuisine privileges the quality of ingredients and regionality, and can be broadly defined as a national tradition of creole culinary practices, based on the complex multicultural and geographically diverse nature of both historical and contemporary Canadian society. There are many culinary practices and dishes that can be either identified as particular to Canada, such fish and brewis, peameal bacon, and ginger beef, or sharing an association with countries from which immigrants to Canada carried over their cuisine, such as pierogies, roast beef, and bannock.
+</center>
 
-<br>
+  <br><br><br><br><br><br>
 
-&ensp;&ensp;&ensp;&ensp;Divisions within Canadian cuisine can be traced along regional lines and have a direct connection to the historical immigration patterns of each region or province. The earliest cuisines of Canada are based on Indigenous, English, Scottish and French roots. The traditional cuisines of both French Canada and English Canada have evolved from those carried over to North America from France and the British Isles respectively, and from their adaptation to Indigenous customs, labour-intensive and/or mobile lifestyles, and hostile environmental conditions. French Canadian cuisine can also be divided into Québécois cuisine and Acadian cuisine. Regional cuisines have continued to develop with subsequent waves of immigration during the 19th, 20th, and 21st centuries, such as from Central Europe, Southern Europe, Eastern Europe, South Asia, East Asia, and the Caribbean.
+<center>
 
-  </tr>
+<table style="background-color: grey;">
+
+		<tr>
+
+		<td colspan="1">
+			<p style="color:whitesmoke"><img width='70px'height='70px' src="https://media.istockphoto.com/vectors/laboratory-beaker-icon-chemical-experiment-in-flask-hemistry-and-vector-id1165295700?k=20&m=1165295700&s=612x612&w=0&h=Nokqv3d9oNEdVTtqkG02vhxVZPVtXS31ZfZ1AQ6BTiY=">
+				Ethanol is a primary alcohol that is ethane in which one of the hydrogens is substituted by a hydroxy group. It has a role as an antiseptic drug, a polar solvent, a neurotoxin, a central nervous system depressant, a teratogenic agent, a NMDA receptor antagonist, a protein kinase C agonist, a disinfectant, a human metabolite, a Saccharomyces cerevisiae metabolite, an Escherichia coli metabolite and a mouse metabolite. It is a primary alcohol, an alkyl alcohol, a volatile organic compound and a member of ethanols. It is a conjugate acid of an ethoxide.
+			</p>
+		</td>
+
+		<td colspan="1">
+
+			<center>
+				
+				<img width='130px'height='160px' src="https://kbimages1-a.akamaihd.net/8fd8c289-80ae-4077-8e57-99484259a86e/1200/1200/False/ethanol-2.jpg">
+
+			<br>
+
+			<h4 style="color:whitesmoke">Get exclusive ebook "Ethanol"</h4>
+
+			<br>
+
+			<a href="https://www.elsevier.com/books/ethanol/basile/978-0-12-811458-2"><input id="marco" type="button" value="Download" ></a>
+
+			</center>
+			
+		</td>
+
+		<td colspan="1">
+			<ul>
+    		<li><a style="color:whitesmoke">General inquiries</a></li>
+    		<a style="color:black;" href="2477516374@qq.com">2477516374@qq.com</a></li>
+    		<li><a style="color:whitesmoke">Learn more</a></li>
+    		<a style="color:black;" href="pubchem.ncbi.nlm.nih.gov/">pubchem.ncbi.nlm.nih.gov/</a></li>
+    	</ul>
+
+		</td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="1">
+			<h1 style="font-family:Comic Sans MS; font-size: 50px; color: whitesmoke;"> <span style="TEXT-DECORATION: overline;">The properties</span></h1>
+		</td>
+
+	</tr>
+
+	<tr>
+		<td><img width='400px'height='300px' src="http://image.slidesharecdn.com/tutorial-100509123913-phpapp01/95/acidbase-food-tutorial-7-728.jpg"></td>
+		<td><img width='400px'height='300px' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ethanol-3D-balls.png/290px-Ethanol-3D-balls.png"></td>
+		<td><img width='400px'height='300px' src="https://media.istockphoto.com/vectors/electrolyte-water-drink-icon-ions-in-drop-vector-id1338723391?k=20&m=1338723391&s=612x612&w=0&h=TQl4F-bjRVdZazFOWkDKwS-hBqynOyTa2c9q70SJXso="></td>
+	</tr>
+
+	<tr>
+
+		<center>
+
+		<td>
+			<h2><span data-descr="Slightly alkaline" style="color: black;">Acid-base property</span></h2><br><br><br>
+		</td>
+
+		<td>
+			<h2><span data-descr="About 75%" style="color:black;">Normal concentrations</span></h2><br><br><br>
+			<!-- 体积百分浓度75%，质量百分浓度70% -->
+		</td>
+
+		<td>
+			<h2><span data-descr="Ethanol is not an electrolyte." style="color: black;">Electrolyte</span></h2><br><br><br>
+		</td>
+
+		</center>
+
+	</tr>
 
 </table>
 
 <br>
-<br>
 <hr>
 <hr>
-<br>
-<br>
 
-<h2 style="color:whitesmoke;">Definitions</h2>
-<h3>&ensp;&ensp;&ensp;&ensp;Although certain dishes may be identified as "Canadian" due to the ingredients used or the origin of their inception, an overarching style of Canadian cuisine may be more difficult to define. Some commentators, such as the former prime minister Joe Clark, believe Canadian cuisine to be a collage of dishes from a variety of cultures. Clark himself has been paraphrased to have noted that "Canada has a cuisine of cuisines. Not a stew pot, but a smorgasbord."</h3>
+<h1 style="font-family:Comic Sans MS; font-size: 50px; color: grey;"> <span style="TEXT-DECORATION: overline;">The use of Ethanol in life</span></h1>
 
-<br>
-<br>
 
-<table>
+<table style="color:grey;">
   <tr>
-    <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Transparentcanadafood.png/800px-Transparentcanadafood.png"width='400px'height='400px'></th>
-    <td>
-      <h3 style="color: black; text-align: left;">
-        &ensp;&ensp;&ensp;&ensp;While the immense size of Canada, and the diversity of its inhabitants, compounds the difficulty in identifying a monolithic identity of Canadian culinary tradition, Hersch Jacobs acknowledges that the lack of a hegemonic definition does not preclude the existence of Canadian cuisine. Lenore Newman argues that there is a distinctly Canadian creole cuisine, and identifies five key properties that together define Canadian cuisine: its reliance on seasonality, multiculturalism, wild foods, regional dishes, and the privileging of ingredients over recipes.
+    <th>
 
-        <br>
+<h1>Primary alcohol</h1>
 
-        &ensp;&ensp;&ensp;&ensp;Indigenous food may be considered uniquely Canadian, and the influence of Métis culture can be considered to have played a particularly important role in the origin of a distinct Canadian cuisine. Foods such as bannock, moose, deer, bison, pemmican, maple taffy, and Métis stews, such as barley stew, are all either traditional Indigenous foods, or originate from Canada with roots in Indigenous cuisines, and are eaten widely throughout the country.
-        <br>
+<br>
 
-        &ensp;&ensp;&ensp;&ensp;There are many foods of foreign origin that are eaten commonly and considered integrated constituents of Canadian cuisine. Pierogies (dumplings of Central and Eastern European origin) are an example of this, due to the large number of early Ukrainian and Polish immigrants, while the ubiquity of roast beef and yorkshire pudding are an example of the heavy English influence. As demonstrated in the history and examples provided in the sections below, much of Canadian cuisine is coloured by the adaptation and development of dishes brought over to Canada by European, and later Asian, settlers. What's more, there is a variety of noteworthy Canadian variations on pre-established, templated food and drink, with their own nationally-defined particularities, such as Canadian cheddar cheese, whisky, bread, wine, bacon, and pancakes.
+<h3>Ethanol has the chemical properties of general primary alcohol and is more active. It is an important raw material and solvent for organic synthesis.</h3>
 
-        <br>
+<!-- 乙醇具有一般伯醇的化学性质，比较活泼，是有机合成的重要原料和重要的溶剂。 -->
 
-        &ensp;&ensp;&ensp;&ensp;Some regional foods are not eaten as frequently in one part of the country as in the other, such as dulse in the Maritimes, stews in the Territories, smoked salmon in British Columbia, or poutine in the Francophone areas of Canada (not limited to Québec). In general, much of what is considered to be Canadian food contains a deal of starch, breads, game meats (such as deer, moose, bison, etc.), and often stews and soups, such as Métis-style and split-pea soup. Certain culinary traditions in Canada, such as the frying of dough, developed out of the country's historical (and contemporary) voyaging and frontier culture, have seen to both the creation of distinct national foods and the flourishing of a broader national association with certain types of dishes. In the case of frying dough, for example, particular foods originating form Canada would include beavertails, apple fritters and toutons, whilst foods such as doughnuts, bannock, bagels, and pancakes, though not physically originating from Canada, have none the less developed within a broader tradition of nationally-recognized cuisine.
-      </h3>
-    </td>
+<br>
+
+<h1>The role of ethanol</h1>
+
+<br>
+
+<h3>Ethanol is often used in the pharmaceutical industry as a disinfectant and antiseptic. Ethanol is also widely used as a drink and fuel. In the past, industrial ethanol was often mixed with small amounts of toxic substances such as methanol to prevent drinking. Ethanol vapour can be mixed with air to form an explosive mixture. Ethanol is a microtoxin. Alcohol intoxication can result from excessive intake of alcohol. Its toxicity is mainly on the central nervous system, the first effect on the cerebral cortex, the performance of excitation and then inhibition; And then act on the subcortical center and cerebellum.</h3>
+
+<!-- 医药业常以乙醇作为消毒剂和防腐剂。乙醇还广泛用作饮料和燃料。过去工业乙醇中常加入少量毒性物如甲醇等以防止饮用。乙醇蒸汽能与空气混合形成爆炸混合物。乙醇属微毒类。过量摄入乙醇可致乙醇中毒。其毒性主要是对中枢神经系统的作用，首先作用于大脑皮质，表现为先兴奋而后抑制;并继而作用于皮质下中枢和小脑。 -->
+
+</th>
+    <th rowspan="2"><img width="800" height="500" src="https://www.valero.com/sites/default/files/2021-07/Hartley_Ethanol_Employees_525x350.jpg"></th>
   </tr>
+
 </table>
 
-<br>
-<br>
 <hr>
 <hr>
 <br>
-<br>
 
-<h2 style="color:whitesmoke">Indigenous</h2>
-
-<table>
-  <tr>
-    <th><h3 style="color: black; text-align: left;">
-&ensp;&ensp;&ensp;&ensp;The traditional Indigenous cuisine of Canada is based on a mixture of wild game, foraged foods, and farmed agricultural products. Each region of Canada, with its own First Nations and Inuit peoples, utilized local resources and distinct preparation techniques for their cuisines.
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;Maple syrup was first collected and used by the aboriginal people of Eastern Canada and the north-eastern United States, and Canada remains the world's largest producer. Though the origin of maple syrup production is not clear, the earliest known syrups were made by repeatedly freezing the collected maple sap and removing the ice to concentrate the sugar in the remaining sap. Maple syrup is one of the most commonly consumed Canadian foods of Aboriginal origins.
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;Dried meat products such as pânsâwân and pemmican are commonly consumed by the indigenous peoples of the plains. In particular, the former was a predecessor for North American-style beef jerky, with the processing methods adapted for beef.
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;In most of the Canadian West Coast and Pacific Northwest, Pacific salmon was an important food resource to the First Nations peoples, along with certain marine mammals. Salmon were consumed fresh during the spawning season, or smoked dry to create a jerky-like food that could be stored year-round. The latter food is commonly known and sold as "salmon jerky".
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;Whipped Soapberry, known as sxusem (sk-HOO-shum, "Indian ice cream") in the Interior Salish languages of British Columbia, is consumed similarly to ice cream or as a cranberry-cocktail-like drink. It is known for being a kidney tonic, which are called agutak in Arctic Canada (with animal/fish fat).
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;In the Arctic, Inuit traditionally survived on a diet consisting of land and marine mammals, fish, and foraged plant products. Meats were consumed fresh, but also often prepared, cached, and allowed to ferment into igunaq or kiviak. These fermented meats have the consistency and smell of certain soft aged cheeses. Snacks such as muktuk, which consist of whale skin and blubber is eaten plain, though occasionally dipped in soy sauce. Chunks of muktuk are sliced with an ulu prior to or during consumption.
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;Fish are eaten boiled, fried, and prior to today's settlements, often in dried forms. The so-called "Eskimo potato", (Inuit: oak-kuk: Claytonia tuberosa) and other "mousefoods", are some of the plants consumed in the Arctic.
-
-<br>
-
-&ensp;&ensp;&ensp;&ensp;Foods such as "bannock", popular with First Nations and Inuit, reflect the historic exchange of these cultures with French fur traders, who brought with them new ingredients and foods. Common contemporary consumption of bannock, powdered milk, and bologna by aboriginal Canadians reflects the legacy of Canadian colonialism in the prohibition of hunting and fishing, and the institutional food rations provided to Indian reserves. Due to similarities in treatment under colonialism, many Native American communities throughout the continent consume similar food items, with some emphasis on local ingredients.
-
-<br>
-
-</h3></th>
-    <td><img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-04/25/12/enhanced/buzzfeed-prod-fastlane-02/longform-original-7068-1493136407-4.jpg?output-format=auto&output-quality=auto"width='500px'height='350px'></td>
-  </tr>
-</table>
-
-    <br>
-    <br>
-    <br>
-    <hr>
-    <hr>
+</center>
 
 <center>
 
 <footer>
 
-  <h5>This page was last edited on 10 April 2022, at 11:39 .</h5>
-  <h5>© copyright 2021 By Marco.</h5>
-  <h5>If you have any suggestions or comments, please feel free to contact me:2477516374@qq.com</h5>
+<div style="font-family: Comic Sans MS;color: grey;">
+
+  <h5>This page was last edited on 1 May 2022, at 11:54.</h5>
+  <h5>© copyright 2022 By Marco.</h5>
+  <h5>
+  	If you have any suggestions or comments, please feel free to contact us:
+  	<center><br>2477516374@qq.com</center>
+  </h5>
+
+</div>
 
 </footer>
 
 </center>
 
+<script type="text/javascript">
+
+	function scrollWindow(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+</script>
+
+<script type="text/javascript">
+
+	function scrollWindoww(){
+    window.scrollTo({ top: 80, behavior: "smooth" });
+}
+
+</script>
+
 </body>
+
 </html>
