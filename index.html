@@ -1,437 +1,203 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-	<meta charset="utf-8">
-	<meta name="viewport">
-
-	<title>Ethanol</title>
-
-	<style type="text/css">
-
-	body{
-			background-color: white;
-
-		    background-position: top left;
-		    background-attachment: scroll;
-        background-size: 100%;
-		}
-    
-    body:not(.custom-background-image):before {
-    	background-color: black;
-	    top: 0;
-	}
-
-	body:not(.custom-background-image):before, 
-	body:not(.custom-background-image):after {
-	    background: inherit;
-	    content: "";
-	    display: block;
-	    height: 120px;
-	    position: fixed;
-	    width: 100%;
-	    z-index: 1;
-	}
-
-	*, *:before, *:after {
-	    box-sizing: inherit;
-	}
-
-    #marco .input{
-      width: 300px;
-      height: 36px;
-      border: 1px solid #000000;
-      border-right: none;
-      border-radius: 4px;
-    }
-    
-    button{
-      position: relative;
-      right: 2px;
-      width: 50;
-      height: 35px;
-      font-size: 14px;
-      color: white;
-      background:  #000000;
-      border：0；
-      border-radius: 4px;
-      border-top-left-radius: 4px;
-		  border-bottom-left-radius: 4px;
-		  border-top-right-radius: 4px;
-		  border-bottom-right-radius: 4px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson3 project(3)</title>
+  <style>
+    #bigbox{
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
     }
 
-    span[data-descr] {
-		  position: relative;
-		  text-decoration: underline;
-		  color: #00F;
-		  cursor: help;
-		  z-index: 0;
+    #bigbox>h1{
+      width: 100%;
+      text-align: center;
+
+    }
+    .box1{
+      height: 200px;
     }
 
-		span[data-descr]:hover::after,
-		span[data-descr]:focus::after {
-		  content: attr(data-descr);
-		  position: absolute;
-		  left: 0;
-		  top: 24px;
-		  min-width: 200px;
-		  border: 1px #aaaaaa solid;
-		  border-radius: 10px;
-		  background-color: black;
-		  padding: 12px;
-		  color: whitesmoke;
-		  font-size: 14px;
-		  z-index: 0;
-		}
+    .box2{
+      height: 220px;
+    }
 
-		#marco{
-		  bottom: 0;
-		  right: 0;
-		  color: #000000; 
-		  background: transparent; 
-		  border: 2px solid #000000;
-		  border-radius: 6px; 
-		  border: none;
-		  color: white;
-/*		  padding: 16px 32px;*/
-		  text-align: center;
-		  display: inline-block;
-		  font-size: 20px;
-		  margin: 4px 2px;
-		  transition-duration: 0.4s; 
-		  transition-duration: 0.4s;
-		  cursor: pointer;
-		  text-decoration: none;
-		  text-transform: uppercase;
-		  border-top-left-radius: 26px;
-		  border-bottom-left-radius: 26px;
-		  border-top-right-radius: 26px;
-		  border-bottom-right-radius: 26px;
-		}
+    .box1 img{
+      float: left;
+      margin: 25px;
+    }
 
-		#marco {
-		      background-color: white; 
-		      color: black; 
-		      border: 2px solid #000000;
-		}
+    .box2 img{
+      float: left;
+      margin:20px 63px;
+      width: 150px;
+      height: 150px;
+  
+    }
 
-		#marco:hover {
-		      background-color: grey;
-		      color: white;
-		}
-
-	  .A{   
-	    position: fixed;
-      top: 40px;
-      margin: 10px 575px ;
-		  width:50px;
-		  height: 50px; 
-		  display: block;
-      z-index: 2;
-		}
-
-		#B{
-	  border-style: solid;
-	  border-width: 2px;
-	  border-color: grey;
-    color: grey;
-    font-family: Comic Sans MS;
-    text-shadow: 1.5px 1.5px 1px #454444;
-    font-size: 31px;
-    text-decoration: none;
-    margin: auto;
-		}
-
-		a:hover, a:active {
-		  color: lightgrey;
-		}
-
-		a.nav:link{
-		  background-color: #f5f5f5;
-		  color: grey;
-		  display: inline;
-		  padding: 10px;
-		  text-align:center;
-		  width: 1200px;
-		  font-family: Comic Sans MS;
-		  font-size: 31px;
-		  text-decoration: none;
-		  margin: auto;
-		}
-
-		a.nav:hover{
-		  color: #f8f8f8;
-		  background-color:#454444;
-		}
-
-		li.nav{
-		  float: left;
-		  list-style-type: none;
-		}
-
-		ul.nav{
-		  display: center;
-		  margin:auto;
-		  font-family: Comic Sans MS;
-		}
-
-		ul.nav li:first-child a {
-		  border-top-left-radius: 26px;
-		  border-bottom-left-radius: 26px;
-		}
-
-		ul.nav li:last-child a {
-		  border-top-right-radius: 26px;
-		  border-bottom-right-radius: 26px;
-		}
-
-		#cheems{
-		  position: fixed;
-		  bottom: 0;
-		  right: 0;
-		  color: #000000; 
-		  background: transparent; 
-		  border: 2px solid #000000;
-		  border-radius: 6px; 
-		  border: none;
-		  color: white;
-		  padding: 16px 32px;
-		  text-align: center;
-		  display: inline-block;
-		  font-size: 16px;
-		  margin: 4px 2px;
-		  transition-duration: 0.4s; 
-		  transition-duration: 0.4s;
-		  cursor: pointer;
-		  text-decoration: none;
-		  text-transform: uppercase;
-		  border-top-left-radius: 26px;
-		  border-bottom-left-radius: 26px;
-		  border-top-right-radius: 26px;
-		  border-bottom-right-radius: 26px;
-		}
-
-		#cheems {
-		      background-color: white; 
-		      color: black; 
-		      border: 2px solid #000000;
-		}
-
-		#cheems:hover {
-		      background-color: grey;
-		      color: white;
-		}
-
-		#menu {
-  position: fixed;
-  left: 5em;
-  top:0;
-  margin-top: 2.5em;
-  z-index: 2;
-}
-
-  </style>
-
-	<link rel="stylesheet" type="text/css" href="Alien2.css">
-
+    .box2 h1{
+      display: block;
+      color: #000;
+      float: left;
+      line-height: 150px;
+  
+    }
+    img{
+      width: 150px;
+      height: 150px;
+    }
+    p{
+      text-align: center;
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .text{
+      height: 20px;
+    }
+    .text span{
+      font-size: 20px;
+      color: #ffffff;
+      margin: 0 100px;
+      line-height: 20px;
+    }
+</style>
 </head>
 
 <body>
 
-	<input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
-
-	<img id="menu" src="https://ak.picdn.net/shutterstock/videos/28965526/thumb/12.jpg" width="150px" height="80px">
-
-<!-- 	<center>
-
-	<div class="A">
-
-		<center>
-		
-			<ul class="nav">
-				<center>
-        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindow()" href=""><b>Home</b></a></li>
-        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindoww()" href=""><b>About</b></a></li>
-        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindowww()" href=""><b>News</b></a></li>
-        <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindowwww()" href=""><b>Recruit</b></a></li>
-        </center>
-      </ul>
-
-    </center>
-
-	</div>
-
-	</center> -->
-
-<br><br><br><br><br><br>
+<center><h2>Lesson3 project(3)</h2></center>
 
 <center>
-
-<h1 class="A" style="color: grey;">Ethanol</h1>
-<h3 style="color: grey;">Ethanol (also called ethyl alcohol, grain alcohol, drinking alcohol, or simply alcohol) is an organic chemical compound. <br>It is a simple alcohol with the chemical formula C2H6O. Its formula can be also written as CH. 3−CH. 2−OH or C.</h1>
-
-</center>
-
-  <br><br><br><br><br><br>
-
-<center>
-
-<table style="background-color: grey;">
-
-		<tr>
-
-		<td colspan="1">
-			<p style="color:whitesmoke"><img width='70px'height='70px' src="https://media.istockphoto.com/vectors/laboratory-beaker-icon-chemical-experiment-in-flask-hemistry-and-vector-id1165295700?k=20&m=1165295700&s=612x612&w=0&h=Nokqv3d9oNEdVTtqkG02vhxVZPVtXS31ZfZ1AQ6BTiY=">
-				Ethanol is a primary alcohol that is ethane in which one of the hydrogens is substituted by a hydroxy group. It has a role as an antiseptic drug, a polar solvent, a neurotoxin, a central nervous system depressant, a teratogenic agent, a NMDA receptor antagonist, a protein kinase C agonist, a disinfectant, a human metabolite, a Saccharomyces cerevisiae metabolite, an Escherichia coli metabolite and a mouse metabolite. It is a primary alcohol, an alkyl alcohol, a volatile organic compound and a member of ethanols. It is a conjugate acid of an ethoxide.
-			</p>
-		</td>
-
-		<td colspan="1">
-
-			<center>
-				
-				<img width='130px'height='160px' src="https://kbimages1-a.akamaihd.net/8fd8c289-80ae-4077-8e57-99484259a86e/1200/1200/False/ethanol-2.jpg">
-
-			<br>
-
-			<h4 style="color:whitesmoke">Get exclusive ebook "Ethanol"</h4>
-
-			<br>
-
-			<a href="https://www.elsevier.com/books/ethanol/basile/978-0-12-811458-2"><input id="marco" type="button" value="Download" ></a>
-
-			</center>
-			
-		</td>
-
-		<td colspan="1">
-			<ul>
-    		<li><a style="color:whitesmoke">General inquiries</a></li>
-    		<a style="color:black;" href="2477516374@qq.com">2477516374@qq.com</a></li>
-    		<li><a style="color:whitesmoke">Learn more</a></li>
-    		<a style="color:black;" href="pubchem.ncbi.nlm.nih.gov/">pubchem.ncbi.nlm.nih.gov/</a></li>
-    	</ul>
-
-		</td>
-
-	</tr>
-
-	<tr>
-
-		<td colspan="1">
-			<h1 style="font-family:Comic Sans MS; font-size: 50px; color: whitesmoke;"> <span style="TEXT-DECORATION: overline;">The properties</span></h1>
-		</td>
-
-	</tr>
-
-	<tr>
-		<td><img width='400px'height='300px' src="http://image.slidesharecdn.com/tutorial-100509123913-phpapp01/95/acidbase-food-tutorial-7-728.jpg"></td>
-		<td><img width='400px'height='300px' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ethanol-3D-balls.png/290px-Ethanol-3D-balls.png"></td>
-		<td><img width='400px'height='300px' src="https://media.istockphoto.com/vectors/electrolyte-water-drink-icon-ions-in-drop-vector-id1338723391?k=20&m=1338723391&s=612x612&w=0&h=TQl4F-bjRVdZazFOWkDKwS-hBqynOyTa2c9q70SJXso="></td>
-	</tr>
-
-	<tr>
-
-		<center>
-
-		<td>
-			<h2><span data-descr="Slightly alkaline" style="color: black;">Acid-base property</span></h2><br><br><br>
-		</td>
-
-		<td>
-			<h2><span data-descr="About 75%" style="color:black;">Normal concentrations</span></h2><br><br><br>
-			<!-- 体积百分浓度75%，质量百分浓度70% -->
-		</td>
-
-		<td>
-			<h2><span data-descr="Ethanol is not an electrolyte." style="color: black;">Electrolyte</span></h2><br><br><br>
-		</td>
-
-		</center>
-
-	</tr>
-
-</table>
-
-<br>
-<hr>
-<hr>
-
-<h1 style="font-family:Comic Sans MS; font-size: 50px; color: grey;"> <span style="TEXT-DECORATION: overline;">The use of Ethanol in life</span></h1>
-
-
-<table style="color:grey;">
-  <tr>
-    <th>
-
-<h1>Primary alcohol</h1>
-
-<br>
-
-<h3>Ethanol has the chemical properties of general primary alcohol and is more active. It is an important raw material and solvent for organic synthesis.</h3>
-
-<!-- 乙醇具有一般伯醇的化学性质，比较活泼，是有机合成的重要原料和重要的溶剂。 -->
-
-<br>
-
-<h1>The role of ethanol</h1>
-
-<br>
-
-<h3>Ethanol is often used in the pharmaceutical industry as a disinfectant and antiseptic. Ethanol is also widely used as a drink and fuel. In the past, industrial ethanol was often mixed with small amounts of toxic substances such as methanol to prevent drinking. Ethanol vapour can be mixed with air to form an explosive mixture. Ethanol is a microtoxin. Alcohol intoxication can result from excessive intake of alcohol. Its toxicity is mainly on the central nervous system, the first effect on the cerebral cortex, the performance of excitation and then inhibition; And then act on the subcortical center and cerebellum.</h3>
-
-<!-- 医药业常以乙醇作为消毒剂和防腐剂。乙醇还广泛用作饮料和燃料。过去工业乙醇中常加入少量毒性物如甲醇等以防止饮用。乙醇蒸汽能与空气混合形成爆炸混合物。乙醇属微毒类。过量摄入乙醇可致乙醇中毒。其毒性主要是对中枢神经系统的作用，首先作用于大脑皮质，表现为先兴奋而后抑制;并继而作用于皮质下中枢和小脑。 -->
-
-</th>
-    <th rowspan="2"><img width="800" height="500" src="https://www.valero.com/sites/default/files/2021-07/Hartley_Ethanol_Employees_525x350.jpg"></th>
-  </tr>
-
-</table>
-
-<hr>
-<hr>
-<br>
-
+<p id="demo"></p>
+<button onclick="gender()">gender</button>
 </center>
 
 <center>
-
-<footer>
-
-<div style="font-family: Comic Sans MS;color: grey;">
-
-  <h5>This page was last edited on 1 May 2022, at 11:54.</h5>
-  <h5>© copyright 2022 By Marco.</h5>
-  <h5>
-  	If you have any suggestions or comments, please feel free to contact us:
-  	<center><br>2477516374@qq.com</center>
-  </h5>
-
-</div>
-
-</footer>
-
+<p id="doge"></p>
+<button onclick="date()">date</button>
 </center>
 
-<script type="text/javascript">
+<p id="demoo"></p>
 
-	function scrollWindow(){
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+  <div id='bigbox'>
+    <div class="box1">
+      <img src=".images1.jpg" alt="">
 
-</script>
+      <img src=".images2.jpg" alt="">
 
-<script type="text/javascript">
+      <img src=".images3.jpg" alt="">
+    </div>
+    <div class="text">
+      <span>You pick</span>
+      <span>System selects</span>
+    </div>
+    <div class="box2">
+      <img src=".images1.jpg" alt="">
+      <h1>pk</h1>
+      <img src=".images1.jpg" alt="">
+    </div>
+  </div>
 
-	function scrollWindoww(){
-    window.scrollTo({ top: 80, behavior: "smooth" });
-}
-
-</script>
+<center>
+<p id="cheems"></p>
+<button onclick="password()">password</button>
+</center>
 
 </body>
+
+<script>
+
+function gender(){
+        var a = prompt('Enter your gender(gentleman or lady)');
+
+        let greeting;
+
+        if (a === 'lady') {
+          greeting = 'Hallo madam' ;
+        }else if (a === 'gentleman'){
+          greeting = 'Hi sir' ;
+        }else {
+          greeting = 'input error';
+        }
+        document.getElementById("demo").innerHTML = greeting;
+        alert(Date()) ;
+}
+
+let imgs=document.getElementsByTagName('img')
+  for(let i=0;i<3;i++){
+    imgs[i].onclick=function(){
+      game(this,i)
+       
+    }
+  }
+  
+  function game(src,i){
+    let str=src.src;
+    let user=document.getElementsByTagName('img')[3]
+    user.src=str
+     
+
+    setTimeout(function (){
+      let user=document.getElementsByTagName('img')[4]
+      let imgSrc=['.images1.jpg','.images2.jpg','.images3.jpg']
+      let num = Math.floor(Math.random() * imgSrc.length)
+      console.log(num)
+      user.src=imgSrc[num]
+      i=i*1
+
+    let rs=document.getElementsByTagName('p')[0]
+    if(i==0&&num==1 || i==1&&num==2
+      || i==2&&num==0){
+        rs.innerHTML="Congratulations on winning"
+      }else if(i==num){
+        rs.innerHTML="Deuce"
+      }else{
+        rs.innerHTML="Game failed"
+         
+      }
+    },200)
+    
+  }
+
+  function date(){
+  var a = new Date().getDay()
+  switch(a){
+  case 1:
+        alert('Happy Monday!');
+        break;
+    case 2:
+        alert('Happy Tuesday');
+        break;
+    case 3:
+        alert('Happy Wednesday!');
+        break;
+    case 4:
+        alert('Happy Thursday!');
+        break;
+    case 5:
+        alert('Happy Friday!');
+        break;
+    case 6:
+        alert('Happy Weekend!');
+        break;
+    case 7:
+        alert('Happy Weekend!');
+        break;
+}}
+
+function password() {
+  
+
+var passworld=prompt('register your password( less than 10 characters and Not allow ! * $ # in it and first character Not allow *)')
+   if(passworld.length<=10 && passworld.indexOf('!') == -1 && passworld.length>0 && passworld.indexOf('*') != 0 && passworld.indexOf('?') == -1 && passworld.indexOf('#') == -1 && passworld.indexOf('$') == -1){
+    alert('you have created your password');
+   }
+   else{alert('Try again');}}
+
+</script>
+
 
 </html>
