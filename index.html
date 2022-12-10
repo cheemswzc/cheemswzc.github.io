@@ -4,40 +4,40 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta name="viewport">
+  <meta charset="utf-8">
+  <meta name="viewport">
 
-	<title>Ethanol</title>
+  <title>Ethanol</title>
 
-	<style type="text/css">
+  <style type="text/css">
 
-	body{
-			background-color: white;
+  body{
+      background-color: white;
 
-		    background-position: top left;
-		    background-attachment: scroll;
+        background-position: top left;
+        background-attachment: scroll;
         background-size: 100%;
-		}
+    }
     
     body:not(.custom-background-image):before {
-    	background-color: black;
-	    top: 0;
-	}
+      background-color: black;
+      top: 0;
+  }
 
-	body:not(.custom-background-image):before, 
-	body:not(.custom-background-image):after {
-	    background: inherit;
-	    content: "";
-	    display: block;
-	    height: 120px;
-	    position: fixed;
-	    width: 100%;
-	    z-index: 1;
-	}
+  body:not(.custom-background-image):before, 
+  body:not(.custom-background-image):after {
+      background: inherit;
+      content: "";
+      display: block;
+      height: 120px;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+  }
 
-	*, *:before, *:after {
-	    box-sizing: inherit;
-	}
+  *, *:before, *:after {
+      box-sizing: inherit;
+  }
 
     #marco .input{
       width: 300px;
@@ -58,174 +58,174 @@
       border：0；
       border-radius: 4px;
       border-top-left-radius: 4px;
-		  border-bottom-left-radius: 4px;
-		  border-top-right-radius: 4px;
-		  border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
 
     span[data-descr] {
-		  position: relative;
-		  text-decoration: underline;
-		  color: #00F;
-		  cursor: help;
-		  z-index: 0;
+      position: relative;
+      text-decoration: underline;
+      color: #00F;
+      cursor: help;
+      z-index: 0;
     }
 
-		span[data-descr]:hover::after,
-		span[data-descr]:focus::after {
-		  content: attr(data-descr);
-		  position: absolute;
-		  left: 0;
-		  top: 24px;
-		  min-width: 250px;
-		  border: 1px #aaaaaa solid;
-		  border-radius: 10px;
-		  background-color: black;
-		  padding: 12px;
-		  color: whitesmoke;
-		  font-size: 14px;
-		  z-index: 0;
-		}
+    span[data-descr]:hover::after,
+    span[data-descr]:focus::after {
+      content: attr(data-descr);
+      position: absolute;
+      left: 0;
+      top: 24px;
+      min-width: 250px;
+      border: 1px #aaaaaa solid;
+      border-radius: 10px;
+      background-color: black;
+      padding: 12px;
+      color: whitesmoke;
+      font-size: 14px;
+      z-index: 0;
+    }
 
-		#marco{
-		  bottom: 0;
-		  right: 0;
-		  color: #000000; 
-		  background: transparent; 
-		  border: 2px solid #000000;
-		  border-radius: 6px; 
-		  border: none;
-		  color: white;
-/*		  padding: 16px 32px;*/
-		  text-align: center;
-		  display: inline-block;
-		  font-size: 20px;
-		  margin: 4px 2px;
-		  transition-duration: 0.4s; 
-		  transition-duration: 0.4s;
-		  cursor: pointer;
-		  text-decoration: none;
-		  text-transform: uppercase;
-		  border-top-left-radius: 26px;
-		  border-bottom-left-radius: 26px;
-		  border-top-right-radius: 26px;
-		  border-bottom-right-radius: 26px;
-		}
+    #marco{
+      bottom: 0;
+      right: 0;
+      color: #000000; 
+      background: transparent; 
+      border: 2px solid #000000;
+      border-radius: 6px; 
+      border: none;
+      color: white;
+/*      padding: 16px 32px;*/
+      text-align: center;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-top-left-radius: 26px;
+      border-bottom-left-radius: 26px;
+      border-top-right-radius: 26px;
+      border-bottom-right-radius: 26px;
+    }
 
-		#marco {
-		      background-color: white; 
-		      color: black; 
-		      border: 2px solid #000000;
-		}
+    #marco {
+          background-color: white; 
+          color: black; 
+          border: 2px solid #000000;
+    }
 
-		#marco:hover {
-		      background-color: grey;
-		      color: white;
-		}
+    #marco:hover {
+          background-color: grey;
+          color: white;
+    }
 
-	  .A{   
-	    position: fixed;
+    .A{   
+      position: fixed;
       top: 40px;
       margin: 10px 575px ;
-		  width:50px;
-		  height: 50px; 
-		  display: block;
+      width:50px;
+      height: 50px; 
+      display: block;
       z-index: 2;
-		}
+    }
 
-		#B{
-	  border-style: solid;
-	  border-width: 2px;
-	  border-color: grey;
+    #B{
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
     color: grey;
     font-family: Comic Sans MS;
     text-shadow: 1.5px 1.5px 1px #454444;
     font-size: 31px;
     text-decoration: none;
     margin: auto;
-		}
+    }
 
-		a:hover, a:active {
-		  color: lightgrey;
-		}
+    a:hover, a:active {
+      color: lightgrey;
+    }
 
-		a.nav:link{
-		  background-color: #f5f5f5;
-		  color: grey;
-		  display: inline;
-		  padding: 10px;
-		  text-align:center;
-		  width: 1200px;
-		  font-family: Comic Sans MS;
-		  font-size: 31px;
-		  text-decoration: none;
-		  margin: auto;
-		}
+    a.nav:link{
+      background-color: #f5f5f5;
+      color: grey;
+      display: inline;
+      padding: 10px;
+      text-align:center;
+      width: 1200px;
+      font-family: Comic Sans MS;
+      font-size: 31px;
+      text-decoration: none;
+      margin: auto;
+    }
 
-		a.nav:hover{
-		  color: #f8f8f8;
-		  background-color:#454444;
-		}
+    a.nav:hover{
+      color: #f8f8f8;
+      background-color:#454444;
+    }
 
-		li.nav{
-		  float: left;
-		  list-style-type: none;
-		}
+    li.nav{
+      float: left;
+      list-style-type: none;
+    }
 
-		ul.nav{
-		  display: center;
-		  margin:auto;
-		  font-family: Comic Sans MS;
-		}
+    ul.nav{
+      display: center;
+      margin:auto;
+      font-family: Comic Sans MS;
+    }
 
-		ul.nav li:first-child a {
-		  border-top-left-radius: 26px;
-		  border-bottom-left-radius: 26px;
-		}
+    ul.nav li:first-child a {
+      border-top-left-radius: 26px;
+      border-bottom-left-radius: 26px;
+    }
 
-		ul.nav li:last-child a {
-		  border-top-right-radius: 26px;
-		  border-bottom-right-radius: 26px;
-		}
+    ul.nav li:last-child a {
+      border-top-right-radius: 26px;
+      border-bottom-right-radius: 26px;
+    }
 
-		#cheems{
-		  position: fixed;
-		  bottom: 0;
-		  right: 0;
-		  color: #000000; 
-		  background: transparent; 
-		  border: 2px solid #000000;
-		  border-radius: 6px; 
-		  border: none;
-		  color: white;
-		  padding: 16px 32px;
-		  text-align: center;
-		  display: inline-block;
-		  font-size: 16px;
-		  margin: 4px 2px;
-		  transition-duration: 0.4s; 
-		  transition-duration: 0.4s;
-		  cursor: pointer;
-		  text-decoration: none;
-		  text-transform: uppercase;
-		  border-top-left-radius: 26px;
-		  border-bottom-left-radius: 26px;
-		  border-top-right-radius: 26px;
-		  border-bottom-right-radius: 26px;
-		}
+    #cheems{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      color: #000000; 
+      background: transparent; 
+      border: 2px solid #000000;
+      border-radius: 6px; 
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-top-left-radius: 26px;
+      border-bottom-left-radius: 26px;
+      border-top-right-radius: 26px;
+      border-bottom-right-radius: 26px;
+    }
 
-		#cheems {
-		      background-color: white; 
-		      color: black; 
-		      border: 2px solid #000000;
-		}
+    #cheems {
+          background-color: white; 
+          color: black; 
+          border: 2px solid #000000;
+    }
 
-		#cheems:hover {
-		      background-color: grey;
-		      color: white;
-		}
+    #cheems:hover {
+          background-color: grey;
+          color: white;
+    }
 
-		#menu {
+    #menu {
   position: fixed;
   left: 5em;
   top:0;
@@ -235,36 +235,31 @@
 
   </style>
 
-	<link rel="stylesheet" type="text/css" href="Alien2.css">
+  <link rel="stylesheet" type="text/css" href="Alien2.css">
 
 </head>
 
 <body>
 
-	<input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
+  <input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
 
-	<img id="menu" src="https://ak.picdn.net/shutterstock/videos/28965526/thumb/12.jpg" width="150px" height="80px">
+  <img id="menu" src="https://ak.picdn.net/shutterstock/videos/28965526/thumb/12.jpg" width="150px" height="80px">
 
-<!-- 	<center>
-
-	<div class="A">
-
-		<center>
-		
-			<ul class="nav">
-				<center>
+<!--  <center>
+  <div class="A">
+    <center>
+    
+      <ul class="nav">
+        <center>
         <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindow()" href=""><b>Home</b></a></li>
         <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindoww()" href=""><b>About</b></a></li>
         <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindowww()" href=""><b>News</b></a></li>
         <li class="nav"><a id="B" class="nav" type="button" onclick="scrollWindowwww()" href=""><b>Recruit</b></a></li>
         </center>
       </ul>
-
     </center>
-
-	</div>
-
-	</center> -->
+  </div>
+  </center> -->
 
 <br><br><br><br><br><br>
 
@@ -281,79 +276,79 @@
 
 <table style="background-color: grey;">
 
-		<tr>
+    <tr>
 
-		<td colspan="1">
-			<br><h1 style="color:whitesmoke">Introduce</h1>
-			<p style="color:whitesmoke">
-				· General primary alcohol <br><br>· Ethanol is often used as a disinfectant and antiseptic <br><br>· Industrial ethanol often mixed with toxic substances to prevent drinking.<br><br>· Ethanol vapour can be mixed with air to form an explosive mixture.
-			</p>
+    <td colspan="1">
+      <br><h1 style="color:whitesmoke">Introduce</h1>
+      <p style="color:whitesmoke">
+        · General primary alcohol <br><br>· Ethanol is often used as a disinfectant and antiseptic <br><br>· Industrial ethanol often mixed with toxic substances to prevent drinking.<br><br>· Ethanol vapour can be mixed with air to form an explosive mixture.
+      </p>
 <!-- 乙醇具有一般伯醇的化学性质，比较活泼，是有机合成的重要原料和重要的溶剂。医药业常以乙醇作为消毒剂和防腐剂。乙醇还广泛用作饮料和燃料。过去工业乙醇中常加入少量毒性物如甲醇等以防止饮用。乙醇蒸汽能与空气混合形成爆炸混合物。乙醇属微毒类。过量摄入乙醇可致乙醇中毒。其毒性主要是对中枢神经系统的作用，首先作用于大脑皮质，表现为先兴奋而后抑制;并继而作用于皮质下中枢和小脑。  -->
-			
-		</td>
+      
+    </td>
 
-		<td colspan="1">
+    <td colspan="1">
 
-			<center>
-				
-				<img width='130px'height='160px' src="https://kbimages1-a.akamaihd.net/8fd8c289-80ae-4077-8e57-99484259a86e/1200/1200/False/ethanol-2.jpg">
+      <center>
+        
+        <img width='130px'height='160px' src="https://kbimages1-a.akamaihd.net/8fd8c289-80ae-4077-8e57-99484259a86e/1200/1200/False/ethanol-2.jpg">
 
-			<br>
+      <br>
 
-			<h4 style="color:whitesmoke">Get exclusive ebook "Ethanol"</h4>
+      <h4 style="color:whitesmoke">Get exclusive ebook "Ethanol"</h4>
 
-			<br>
+      <br>
 
-			<a href="https://www.elsevier.com/books/ethanol/basile/978-0-12-811458-2"><input id="marco" type="button" value="Download" ></a>
+      <a href="https://www.elsevier.com/books/ethanol/basile/978-0-12-811458-2"><input id="marco" type="button" value="Download" ></a>
 
-			</center>
-			
-		</td>
+      </center>
+      
+    </td>
 
-		<td colspan="1">
-			<ul>
-    		<ol><a style="color:whitesmoke"><h1>Hazard</h1></a></ol>
-    		<a style="color:whitesmoke"><li> Ethanol is a microtoxin.</li><br><br><li>Excessive intake of alcohol firstly effect on the cerebral cortex, then act on the subcortical center and cerebellum. </li><br><br><li>The performance of excitation and then inhibition</li></a>
-    	</ul>
+    <td colspan="1">
+      <ul>
+        <ol><a style="color:whitesmoke"><h1>Hazard</h1></a></ol>
+        <a style="color:whitesmoke"><li> Ethanol is a microtoxin.</li><br><br><li>Excessive intake of alcohol firstly effect on the cerebral cortex, then act on the subcortical center and cerebellum. </li><br><br><li>The performance of excitation and then inhibition</li></a>
+      </ul>
 
-		</td>
+    </td>
 
-	</tr>
+  </tr>
 
-	<tr>
+  <tr>
 
-		<td colspan="1">
-			<h1 style="font-family:Comic Sans MS; font-size: 50px; color: whitesmoke;"> <span style="TEXT-DECORATION: overline;">The properties</span></h1>
-		</td>
+    <td colspan="1">
+      <h1 style="font-family:Comic Sans MS; font-size: 50px; color: whitesmoke;"> <span style="TEXT-DECORATION: overline;">The properties</span></h1>
+    </td>
 
-	</tr>
+  </tr>
 
-	<tr>
-		<td><img width='400px'height='300px' src="http://image.slidesharecdn.com/tutorial-100509123913-phpapp01/95/acidbase-food-tutorial-7-728.jpg"></td>
-		<td><img width='400px'height='300px' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ethanol-3D-balls.png/290px-Ethanol-3D-balls.png"></td>
-		<td><img width='400px'height='300px' src="https://media.istockphoto.com/vectors/electrolyte-water-drink-icon-ions-in-drop-vector-id1338723391?k=20&m=1338723391&s=612x612&w=0&h=TQl4F-bjRVdZazFOWkDKwS-hBqynOyTa2c9q70SJXso="></td>
-	</tr>
+  <tr>
+    <td><img width='400px'height='300px' src="http://image.slidesharecdn.com/tutorial-100509123913-phpapp01/95/acidbase-food-tutorial-7-728.jpg"></td>
+    <td><img width='400px'height='300px' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ethanol-3D-balls.png/290px-Ethanol-3D-balls.png"></td>
+    <td><img width='400px'height='300px' src="https://media.istockphoto.com/vectors/electrolyte-water-drink-icon-ions-in-drop-vector-id1338723391?k=20&m=1338723391&s=612x612&w=0&h=TQl4F-bjRVdZazFOWkDKwS-hBqynOyTa2c9q70SJXso="></td>
+  </tr>
 
-	<tr>
+  <tr>
 
-		<center>
+    <center>
 
-		<td>
-			<h2><span data-descr="Slightly alkaline" style="color: black;">Acid-base property</span></h2><br><br><br>
-		</td>
+    <td>
+      <h2><span data-descr="Slightly alkaline" style="color: black;">Acid-base property</span></h2><br><br><br>
+    </td>
 
-		<td>
-			<h2><span data-descr="About 75%" style="color:black;">Normal concentrations</span></h2><br><br><br>
-			<!-- 体积百分浓度75%，质量百分浓度70% -->
-		</td>
+    <td>
+      <h2><span data-descr="About 75%" style="color:black;">Normal concentrations</span></h2><br><br><br>
+      <!-- 体积百分浓度75%，质量百分浓度70% -->
+    </td>
 
-		<td>
-			<h2><span data-descr="Ethanol is not an electrolyte." style="color: black;">Electrolyte</span></h2><br><br><br>
-		</td>
+    <td>
+      <h2><span data-descr="Ethanol is not an electrolyte." style="color: black;">Electrolyte</span></h2><br><br><br>
+    </td>
 
-		</center>
+    </center>
 
-	</tr>
+  </tr>
 
 </table>
 
@@ -361,7 +356,7 @@
 <hr>
 <hr>
 
-<h1 style="font-family:Comic Sans MS; font-size: 50px; color: grey;"> <span style="TEXT-DECORATION: overline;">Ethanol in life</span></h1>
+<a href="ICS4U(2).html"><h1 style="font-family:Comic Sans MS; font-size: 50px; color: grey;"><span style="TEXT-DECORATION: overline;">Ethanol in life</span></h1></a>
 
 
 <table style="color:grey;">
@@ -373,13 +368,13 @@
 <br>
 
 <h3>
-	<ul>
-		<li>The concentration of medical disinfectant alcohol (ethanol) is 75%.</li>
-		<li>If the concentration is too low, the effect is not obvious </li>
-		<li>If the concentration is too high, due to the effect is too strong </li>
-		<li>75% of the concentration of alcohol sterilization is the best.</li> 
-		<li>Ninety-five percent of medical alcohol is used for physical cooling.</li>
-	</ul>
+  <ul>
+    <li>The concentration of medical disinfectant alcohol (ethanol) is 75%.</li>
+    <li>If the concentration is too low, the effect is not obvious </li>
+    <li>If the concentration is too high, due to the effect is too strong </li>
+    <li>75% of the concentration of alcohol sterilization is the best.</li> 
+    <li>Ninety-five percent of medical alcohol is used for physical cooling.</li>
+  </ul>
 </h3>
 
 <!-- 医用消毒酒精（乙醇）的浓度是75%。75%的酒精主要作用是因为可以进入细菌的细胞内，完全的使细菌的蛋白质变性，破坏细菌，而浓度过低，效果不明显，浓度过高，如90%的，由于效果太强，可能导致只是让细菌细胞最外面的蛋白质变性，而形成一个保护圈，使酒精不能完全进入细菌细胞内，达不到杀菌的目的。所以经过实验，75%的浓度的酒精杀菌效果最好。而95%的医用酒精主要用来物理降温。  -->
@@ -390,7 +385,7 @@
 
 <br>
 
-	    <h3></h3>
+      <h3></h3>
 
 </th>
     <th rowspan="2"><img width="800" height="500" src="https://www.valero.com/sites/default/files/2021-07/Hartley_Ethanol_Employees_525x350.jpg"></th>
@@ -410,12 +405,13 @@
 
 <div style="font-family: Comic Sans MS;color: grey;">
 
-  <h5>This page was last edited on 1 May 2022, at 11:54.</h5>
-  <h5>© copyright 2022 By Marco.</h5>
-  <h5>
-  	If you have any suggestions or comments, please feel free to contact us:
-  	<center><br>2477516374@qq.com</center>
-  </h5>
+  <h5><del>This page was last edited on 8 August 2022, at 11:54.</del></h5>
+  <h4>This page was last edited on 10 December 2022, at 11:54.</h4>
+  <h3>© copyright 2022 <sup>12/10</sup> By Marco <sub><ins>cheems</ins></sub>.</h3>
+  <h2>
+    <em><mark>If you have any suggestions or comments, please feel free to contact us:</mark></em>
+    <center><br><b>2477516374@qq.com</b></center>
+  </h2>
 
 </div>
 
@@ -425,7 +421,7 @@
 
 <script type="text/javascript">
 
-	function scrollWindow(){
+  function scrollWindow(){
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -433,7 +429,7 @@
 
 <script type="text/javascript">
 
-	function scrollWindoww(){
+  function scrollWindoww(){
     window.scrollTo({ top: 80, behavior: "smooth" });
 }
 
