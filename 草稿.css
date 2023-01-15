@@ -456,3 +456,91 @@ nav ul li a:hover
           background-color: grey;
           color: white;
     }
+
+
+.picitem {
+    width: 20%;
+    padding: 2%;
+    float: left;
+}
+
+#banner {
+    padding: 7rem;
+    height: 25rem;
+    background-image: url("Pocahontas-Cabins.png");
+    background-size: 100%;
+    margin: 0;
+}
+#mre {
+    padding: 1rem;
+    background-color: #c6262e;
+    color: #fff;
+}
+
+
+#main {
+    padding: 3rem;
+}
+
+.titl {
+    color: #f8560d;
+    font-size: 36px;
+    margin-top: -7px;
+}
+#picsti{
+    padding-left: 2rem;
+}
+
+.lmore {
+    padding: 0.5rem;
+	position:relative;
+    color: #2c292d;
+    font-family: 'Inter var';
+    font-weight: bolder;
+}
+
+.lmore:hover, .moretxt {
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.moretxt {
+	position: absolute;
+    width: 30rem;
+    color: #fff;
+    padding: .7rem;
+    margin-left: -12rem;
+}
+
+.toronto {
+    background-color: #a9dc76;
+    left: 60.5rem;
+    top: -7.6rem;
+}
+
+.montreal {
+    background-color: #fc9867;
+    left: 61rem;
+    top: -12.6rem;
+}
+
+.vancouver {
+    background-color:#ff6188;
+    left: -9rem;
+    top: -22.7rem;
+}
+.moretxt {
+    background-color: rgba(0,0,0,.5);
+}
+#mtrinfo {
+    left: 68rem;
+    top: 56.5rem;
+}
+
+#torinfo {
+    left: 64rem;
+    top: 60rem;
+}
+#vcvinfo {
+    left: 13rem;
+    top: 46rem;
+}
