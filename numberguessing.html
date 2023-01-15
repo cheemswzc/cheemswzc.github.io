@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="草稿.css">
+  <title>Number Guessing</title>
+  <style>
+    #container_P{
+      margin:auto;
+      border:5px solid lightBlue;
+      font-size:30px;
+      padding:10px;
+      text-align:center;
+      height:260px;
+      width:600px;
+      background-color:mintcream;
+    }
+    #Input_P{
+      width:170px;
+      height:23px;
+    
+    }
+  </style>
+</head>
+<body>
+  <div id="container_P">
+    <p>Guess a number between 0 and 100</p>
+    <p id="output_P">Enter a number below</p>
+    <input id="Input_P">
+    <button id="enter_P" onclick="checkNumber()">Enter</button>
+    <button id="again_P" onclick="reload()">Play again</button>
+  </div>
+
+  <center><a href="Relax.html">Return<a></center>
+ 
+  <script>
+    var output = document.getElementById('output_P');
+ 
+    var randomNumber = Math.ceil(Math.random()*101);
+ 
+    function checkNumber(){
+      var input = document.getElementById('Input_P').value;
+      if(input == randomNumber){
+        output.innerHTML="You guessed right "+ ", "+ " it was "+ randomNumber;
+        output.style.color="green";
+      }
+      else if(input>randomNumber && input<=100){
+        output.innerHTML="You guessed too high";
+      }
+      else if(input<randomNumber && input>=0){
+        output.innerHTML="You guessed too low";
+      }
+      else if(input<0){
+        output.innerHTML="Too small, it has to be between 0 and 100";
+      }
+      else if(isNaN(input)){
+        output.innerHTML="That's not a number!";
+      }
+      else{
+        output.innerHTML="Too big, it has to be between 0 and 100";
+      }
+ 
+    }
+
+    function reload(){
+      location.reload();
+    }
+  </script>
+</body>
+</html>
+

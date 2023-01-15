@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.ss">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" type="text/css" href="草稿.css">
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap');
+@import url(responsive.css);
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto+Serif+SC',sans-serif;
+    background: url(bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    box-sizing: border-box;
+}
+header
+{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+h1 {
+    font-family: 'Inter var';
+    color: #fff;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+}
+
+strong {
+    font-family: 'Inter var';
+}
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
+
+    <div id="nav">
+    <header>
+        <a href="#" class="logo">Canada</a>
+        <div class="mean-toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="Food.html">Food</a></li>
+                <li><a href="Tourism.html" class="active">Tourism</a></li>
+                <li><a href="Culture1.html">Cultural</a></li>
+                <li><a href="Relax.html">Relax</a></li>
+                <li><a href="member.html">Join us</a></li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+    </header>
+    </div>
+    <div id="banner">
+        <h1>CANADA IS THE<br>PERFECT<br>VACATION<br>DESTINATION</h1>
+        <a id="mre" href="https://www.canadacrossroads.com/best-places-to-visit-in-canada-in-winter/">Learn more</a>
+    </div>
+    <div id="main">
+        <div id="picsti">
+            <h3 style="color: #a62100">Canada's</h3>
+            <h2 class="titl">Signature views</h2></div>
+        <div class="picitem">
+            <img src="https://d28wuw2qq2j212.cloudfront.net/sites/default/files/styles/jp_square/public/posts/canuniquehoods-c130003-310rr-2000.jpg?itok=7fg-PBox">
+            <br>
+            <strong>Canada's unique neighbourhoods</strong>
+        </div>
+        <div class="picitem">
+            <img src="dtwn.jpeg">
+            <br>
+            <strong>Toronto Downtown</strong>
+        </div>
+        <div class="picitem">
+            <img src="parliamenthill.png">
+            <br>
+            <strong>Parliament Hill</strong>
+        </div>
+        <div class="picitem">
+            <img src="Pyramid-Lake.png">
+            <br>
+            <strong>Pyramid Lake Island Jasper</strong>
+        </div>
+        <iframe style="margin: 2rem; height: 500px; width: 100%; border: none;" src="https://facilmap.org/#5/55.541/-94.524/"></iframe>
+    </div>
+    <script>fetch("https://ipinfo.io/json?token=26d52d593a9293").then(
+        (response) => response.json()
+      ).then(
+        (jsonResponse) => alert("Hello, friend from " + jsonResponse.city + "! " + (jsonResponse.country == "CA"?"Enjoy your stay in Canada!":"Wanna book a visit to Canada?"))
+      )
+
+
+  function scrollWindow(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
+
+  </script>
+      <a href="pg2.html" style="color: white">page 2</a>
+</body>
+
+              <center>
+              <div class="footer">
+                  <h5>This page was last edited on 14 Jan 2023, at 19:54.</h5>
+                  <h5>© copyright 2023 By Kevin.</h5>
+                  <h5>
+                   If you have any suggestions or comments, please feel free to contact me:
+                   <center><br>+86 13382146586</center>
+                  </h5>
+
+              </div>
+            </center>
+
+</html>
+

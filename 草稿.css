@@ -1,0 +1,458 @@
+
+.headdddd {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 10px;
+}
+
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width:100%;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap');
+@import url(responsive.css);
+
+.logo
+{
+    float:left;
+    text-align: center;
+    line-height: 60px;
+    font-size: 36px;
+    padding: 0 20px;
+    color:#C21F30;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+nav
+{
+    float:right;
+}
+.clear
+{
+    clear: both;
+}
+nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    background: #C21F30;
+    color: #fff;
+    transition: 0.5s;
+}
+@media (max-width: 1200px)
+{
+    header
+    {
+        margin: 20px;
+    }
+}
+@media (max-width: 768px)
+{
+    .mean-toggle{
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 10px;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #C21F30;
+    }
+    .mean-toggle:before
+    {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .mean-toggle.active:before
+    {
+        content: '\f00d';
+    }
+    nav
+    {
+        display:none;
+    }
+    nav.active
+    {
+        display:block;
+        width :100%;
+    }
+    nav.active ul
+    {
+        display: block;
+    }
+    nav.active ul li 
+    {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+
+
+.picitem {
+    width: 20%;
+    padding: 2%;
+    float: left;
+}
+
+#banner {
+    padding: 7rem;
+    height: 25rem;
+    background-image: url("Pocahontas-Cabins.png");
+    background-size: 100%;
+    margin: 0;
+}
+#mre {
+    padding: 1rem;
+    background-color: #c6262e;
+    color: #fff;
+}
+
+
+#main {
+    padding: 3rem;
+}
+
+.titl {
+    color: #f8560d;
+    font-size: 36px;
+    margin-top: -7px;
+}
+#picsti{
+    padding-left: 2rem;
+}
+
+.lmore {
+    padding: 0.5rem;
+    position:relative;
+    color: #2c292d;
+    font-family: 'Inter var';
+    font-weight: bolder;
+}
+
+.lmore:hover, .moretxt {
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.moretxt {
+    position: absolute;
+    width: 30rem;
+    color: #fff;
+    padding: .7rem;
+    margin-left: -12rem;
+}
+
+.toronto {
+    background-color: #a9dc76;
+    left: 60.5rem;
+    top: -7.6rem;
+}
+
+.montreal {
+    background-color: #fc9867;
+    left: 61rem;
+    top: -12.6rem;
+}
+
+.vancouver {
+    background-color:#ff6188;
+    left: -9rem;
+    top: -22.7rem;
+}
+.moretxt {
+    background-color: rgba(0,0,0,.5);
+}
+#mtrinfo {
+    left: 68rem;
+    top: 56.5rem;
+}
+
+#torinfo {
+    left: 64rem;
+    top: 60rem;
+}
+#vcvinfo {
+    left: 13rem;
+    top: 46rem;
+}
+
+    #cheems{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      color: #000000; 
+      background: transparent; 
+      border: 2px solid #000000;
+      border-radius: 6px; 
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-top-left-radius: 26px;
+      border-bottom-left-radius: 26px;
+      border-top-right-radius: 26px;
+      border-bottom-right-radius: 26px;
+    }
+
+    #cheems {
+          background-color: white; 
+          color: black; 
+          border: 2px solid #000000;
+    }
+
+    #cheems:hover {
+          background-color: grey;
+          color: white;
+    }
+
+      #font_P{
+          font-size: 50px;
+          text-align: center;
+          font-family: cursive;
+      }
+      #gameOver{
+          display:none;
+          font-size: 30px;
+          text-align: center;
+      }
+      #gameContainer{
+          width: 500px;
+          height: 500px;
+          margin: 0 auto;
+          display:flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+      }
+      .square{
+         border:2px solid black; 
+         resize: none;
+         width:30%;
+         height:35%;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .square p{
+          font-size: 80px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+
+      .notClicked:hover{
+          background-color: grey;
+      }
+
+
+    #bigbox{
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+    }
+
+    #bigbox>h1{
+      width: 100%;
+      text-align: center;
+
+    }
+    .box1{
+      height: 200px;
+    }
+
+    .box2{
+      height: 220px;
+    }
+
+    .box1 img{
+      float: left;
+      margin: 25px;
+    }
+
+    .box2 img{
+      float: left;
+      margin:20px 63px;
+      width: 150px;
+      height: 150px;
+  
+    }
+
+    .box2 h1{
+      display: block;
+      color: #000;
+      float: left;
+      line-height: 150px;
+
+  }
+  
+        #font_P{
+          font-size: 50px;
+          text-align: center;
+          font-family: cursive;
+      }
+      #gameOver{
+          display:none;
+          font-size: 30px;
+          text-align: center;
+      }
+      #gameContainer{
+          width: 500px;
+          height: 500px;
+          margin: 0 auto;
+          display:flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+      }
+      .square{
+         border:2px solid black; 
+         resize: none;
+         width:30%;
+         height:35%;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .square p{
+          font-size: 80px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+
+      .notClicked:hover{
+          background-color: grey;
+      }
+
+
+    #cheemss{
+      color: #000000; 
+      background: transparent; 
+      border: 2px solid #000000;
+      border-radius: 6px; 
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-top-left-radius: 26px;
+      border-bottom-left-radius: 26px;
+      border-top-right-radius: 26px;
+      border-bottom-right-radius: 26px;
+    }
+
+    #cheemss {
+          background-color: white; 
+          color: black; 
+          border: 2px solid #000000;
+    }
+
+    #cheemss:hover {
+          background-color: grey;
+          color: white;
+    }

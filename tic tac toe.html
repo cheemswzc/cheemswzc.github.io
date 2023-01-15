@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+      #font_P{
+          font-size: 50px;
+          text-align: center;
+          font-family: cursive;
+      }
+      #gameOver{
+          display:none;
+          font-size: 30px;
+          text-align: center;
+      }
+      #gameContainer{
+          width: 500px;
+          height: 500px;
+          margin: 0 auto;
+          display:flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+      }
+      .square{
+         border:2px solid black; 
+         resize: none;
+         width:30%;
+         height:35%;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .square p{
+          font-size: 80px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+
+      .notClicked:hover{
+          background-color: grey;
+      }
+    </style>
+</head>
+
+<body style="background-color: mintcream;">
+    <p id="font_P">Tic Tac Toe Game</p>
+    <div id='gameContainer'></div>
+    <div id='gameOver'>
+        <p>Game over, <span id='winner'></span></p>
+    </div>
+      <center><a href="Relax.html">Return<a></center>
+    <script>
+        const container = document.getElementById("gameContainer");
+        const squareArray = [];
+        let nextMove = "X";
+
+        //determine if game is over
+
+        function gameOver(message) {
+          document.getElementById("winner").innerHTML = message;
+          container.style.display = "none";
+          document.getElementById("gameOver").style.display = "block";
+        }
+
+        //determine if game is a tie
+        function isDraw() {
+          let shouldReturn = true;
+          squareArray.forEach(({ state }) => {
+            if (state == "") shouldReturn = false;
+          });
+          return shouldReturn;
+        }
+
+        //determine who won the game
+        function wonGame() {
+          const lines = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6],
+          ];
+          for (let i = 0; i < lines.length; i++) {
+            const [a, b, c] = lines[i];
+            if (
+              squareArray[a].state !== "" &&
+              squareArray[a].state === squareArray[b].state &&
+              squareArray[a].state === squareArray[c].state
+            ) {
+              return true;
+            }
+          }
+          return false;
+        }
+
+        class ClassSquare {
+          constructor(element, index) {
+            this.element = element;
+            this.index = index;
+            this.state = "";
+          }
+          clicked() {
+            this.state = nextMove;
+            this.element.classList.remove("notClicked");
+            this.element.onclick = function () {
+              return false;
+            };
+            this.element.querySelector("p").innerHTML = this.state;
+            if (wonGame()) return gameOver("the winner is player " + this.state);
+            if (isDraw()) return gameOver("it is a draw");
+            nextMove == "X" ? (nextMove = "O") : (nextMove = "X");
+          }
+        }
+
+        for (let index = 0; index < 9; index++) {
+          const div = document.createElement("div");
+          div.classList.add("square", "notClicked");
+          const square = new ClassSquare(div, index);
+          div.onclick = function () {
+            square.clicked();
+          };
+          div.appendChild(document.createElement("p"));
+          container.appendChild(div);
+          squareArray.push(square);
+        }
+
+    </script>
+</body>
+
+</html>

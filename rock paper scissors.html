@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <title>Rock Paper Scisscors</title>
+  <style>
+
+    #bigbox{
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+    }
+
+    #bigbox>h1{
+      width: 100%;
+      text-align: center;
+
+    }
+    .box1{
+      height: 200px;
+    }
+
+    .box2{
+      height: 220px;
+    }
+
+    .box1 img{
+      float: left;
+      margin: 25px;
+    }
+
+    .box2 img{
+      float: left;
+      margin:20px 63px;
+      width: 150px;
+      height: 150px;
+  
+    }
+
+    .box2 h1{
+      display: block;
+      color: #000;
+      float: left;
+      line-height: 150px;
+  
+    }
+    img{
+      width: 150px;
+      height: 150px;
+    }
+    p{
+      text-align: center;
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .text{
+      height: 20px;
+    }
+    .text span{
+      font-size: 20px;
+      color: #ffffff;
+      margin: 0 100px;
+      line-height: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+  <input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
+
+<center><h2>Rock Paper Scissors</h2></center>
+
+
+<p id="demoo"></p>
+
+  <div id='bigbox'>
+    <div class="box1">
+      <img src="images1.jpg" alt="">
+
+      <img src="images2.jpg" alt="">
+
+      <img src="images3.jpg" alt="">
+    </div>
+    <div class="text">
+      <span>You pick</span>
+      <span>System selects</span>
+    </div>
+    <div class="box2">
+      <img src="images1.jpg" alt="">
+      <h1>pk</h1>
+      <img src="images1.jpg" alt="">
+    </div>
+  </div>
+
+  <center><a id="cheemss" href="Relax.html">Return<a></center>
+
+</body>
+<script>
+  let imgs=document.getElementsByTagName('img')
+  for(let i=0;i<3;i++){
+    imgs[i].onclick=function(){
+      game(this,i)
+       
+    }
+  }
+  
+  function game(src,i){
+    let str=src.src;
+    let user=document.getElementsByTagName('img')[3]
+    user.src=str
+     
+
+    setTimeout(function (){
+      let user=document.getElementsByTagName('img')[4]
+      let imgSrc=['images1.jpg','images2.jpg','images3.jpg']
+      let num = Math.floor(Math.random() * imgSrc.length)
+      console.log(num)
+      user.src=imgSrc[num]
+      i=i*1
+
+    let rs=document.getElementsByTagName('p')[0]
+    if(i==0&&num==1 || i==1&&num==2
+      || i==2&&num==0){
+        rs.innerHTML="Congratulations on winning"
+      }else if(i==num){
+        rs.innerHTML="Deuce"
+      }else{
+        rs.innerHTML="Game failed"
+         
+      }
+    },200)
+    
+  }
+
+    function scrollWindow(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+</script>
+
+
+</html>
